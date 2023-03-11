@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
+<web-app>
+	
+	<servlet>
+		<servlet-name>MyservletPage1</servlet-name>
+		<servlet-class>FirstServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>MyservletPage2</servlet-name>
+		<servlet-class>SecondServlet</servlet-class>
+		<init-param>
+				<param-name>nomParDefaut</param-name>
+				<param-value>Inconnu</param-value>
+			</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>MyservletPage3</servlet-name>
+		<servlet-class>ThirdServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>MyservletPage4</servlet-name>
+		<servlet-class>ThirdServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyservletPage1</servlet-name>
+		<url-pattern>/FirstServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>MyservletPage2</servlet-name>
+		<url-pattern>/SecondServlet</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>MyservletPage3</servlet-name>
+		<url-pattern>/ThirdServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MyservletPage4</servlet-name>
+		<url-pattern>/FourthServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>

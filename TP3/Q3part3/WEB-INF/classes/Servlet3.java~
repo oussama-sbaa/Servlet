@@ -1,0 +1,37 @@
+package abpartage;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.net.*;
+
+public class Servlet3 extends HttpServlet {		
+
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				
+				if(request.getSession(false)==null)
+				response.sendRedirect("myServlet1");
+				else{
+			    response.setContentType("text/html");
+
+				PrintWriter out = response.getWriter();	
+
+				 // lister les sessions
+			    out.println(" Information session :"); 
+			    String age = request.getParameter("age");
+			    String code = request.getParameter("code");
+				HttpSession session = request.getSession();
+				session.setAttribute("age", age);
+				session.setAttribute("code", code);
+				out.println(" Nom:"+session.getAttribute("nom"));
+				out.println(" Age:"+session.getAttribute("age"));
+				out.println(" Code postal:"+session.getAttribute("code"));
+				out.println("<br><a href="+response.encodeURL("myServlet1")+">Modifer</a>");
+				out.println("<br><a href="+response.encodeURL("myServlet4")+">Deconnexion</a>");
+			}
+				
+				
+
+	}	
+
+} 

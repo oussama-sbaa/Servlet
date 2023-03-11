@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web
+Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
+<web-app>
+
+	<servlet>
+		<servlet-name>First-Servlet</servlet-name>
+		<servlet-class>FirstServlet</servlet-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>guest</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>Second-Servlet</servlet-name>
+		<servlet-class>SecondServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Third-Servlet</servlet-name>
+		<servlet-class>ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>First-Servlet</servlet-name>
+		<url-pattern>/form</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Second-Servlet</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Third-Servlet</servlet-name>
+		<url-pattern>/profil</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,26 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class jq7 extends HttpServlet {
+public void doPost(HttpServletRequest request,
+HttpServletResponse response)
+throws ServletException, IOException {
+    
+    
+   ServletConfig appConfig = getServletConfig();
+   ServletContext appContext = getServletContext();
+   String name = request.getParameter("fname");
+   PrintWriter out = response.getWriter();
+   
+   if(name.isEmpty()){
+      
+      
+        out.println("Hello "+ appConfig.getInitParameter("fname") + " I'm Oussama");
+   }
+   else {
+    
+        out.println("Hello "+ name + " I'm Oussama");
+}
+}
+}
+
